@@ -1,0 +1,27 @@
+@use '../../helpers/index' as *;
+
+.btn {
+  border-radius: rem(16);
+  padding: fluid(27,20) fluid(24,17);
+  white-space: nowrap;
+  transition: all ,.3s cubic-bezier(.2, .64, .48, 1.24);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: rem(16);
+  color: var(--white);
+  border: none;
+  text-align: center;
+  display: inline-block;
+  &:hover{
+    color: var(--white);
+  }
+  &-primary {
+    background: linear-gradient(135deg, #5975ff 0%, #2640bf 100%);
+    &:hover{
+      box-shadow: 0 0 rem(10) #2640bf;
+    }
+  }
+  &--bordered{
+    border: 1px solid var(--accent);
+  }
+}

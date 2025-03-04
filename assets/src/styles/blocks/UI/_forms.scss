@@ -1,0 +1,167 @@
+@use '../../helpers' as *;
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+{
+  border-radius: rem(12);
+  padding: rem(16) rem(14);
+  width: 100%;
+  font-weight: 400;
+  font-size: rem(12);
+  color: var(--text);
+  border: 1px solid var(--stroke);
+  background: transparent;
+  margin-bottom: rem(8);
+}
+input::placeholder {
+  color: var(--text);
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+  width: 100%;
+  border-radius: rem(16);
+  padding: rem(12) rem(24);
+  background: linear-gradient(135deg, #5975ff 0%, #2640bf 100%);
+  white-space: nowrap;
+  transition: all , .3s ease;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: rem(12);
+  color: var(--white);
+  border: none;
+}
+
+button:active,
+button:focus,
+button:hover,
+input[type="button"]:hover,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  box-shadow: 0 0 rem(10) #2640bf;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid #2640bf;
+}
+
+.wpcf7-form{
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  label{
+    position: relative;
+    display: block;
+    width: 100%;
+    .iconInput{
+      position: absolute;
+      top: 25%;
+      left: rem(16);
+      z-index: 1;
+      @include media(md){
+
+      }
+    }
+  }
+  .send-wrap{
+    @include media(rxl){
+      display: flex;
+    }
+  }
+  input[name='acceptance-682']{
+    display: none;
+  }
+  a{
+    color: var(--accent);
+  }
+  .wpcf7-form-control{
+    padding-left: rem(40);
+    @include media(md){
+      padding-left: rem(48);
+    }
+  }
+  .wpcf7-form-control-wrap{
+    display: block;
+  }
+  .wpcf7-submit{
+    min-width: rem(120);
+    padding-left: rem(24);
+  }
+  .wpcf7-submit, .wpcf7-acceptance{
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  .wpcf7-acceptance{
+    font-weight: 400;
+    padding-right: rem(20);
+    line-height: 1.25;
+    margin: 0 auto;
+    font-size: rem(12);
+    color: var(--hint);
+    padding: 0;
+    margin-top: rem(8);
+    @include media(rxl){
+      margin-top: 0;
+    }
+  }
+  .wpcf7-spinner{
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  .wpcf7-not-valid-tip{
+    position: absolute;
+    bottom: rem(3);
+    left: rem(25);
+    font-size: rem(12);
+    margin-bottom: rem(4);
+    padding-left: rem(16);
+    @include media(md){
+      left: rem(32);
+    }
+  }
+  .wpcf7-response-output{
+    font-size: rem(12);
+    border: none!important;
+    display: block;
+    color: var(--hint);
+    margin: 0 !important;
+    text-align: center;
+    padding-top: 16px !important;
+  }
+}

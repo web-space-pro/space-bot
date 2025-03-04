@@ -1,0 +1,258 @@
+@use '../../helpers' as *;
+.chat-bot{
+  padding-top: rem(20);
+  margin-bottom: rem(20);
+  padding-right: 0;
+  @include media(lg){
+    padding-top: rem(40);
+    margin-bottom: rem(40);
+  }
+  @include media(xl){
+    min-height: 100vh;
+  }
+  &__container{
+    display: flex;
+    gap: rem(30);
+    flex-direction: column;
+    @include media(sm){
+      gap: rem(50);
+    }
+    @include media(lg){
+      flex-direction: row;
+    }
+    @include media(rxl){
+      gap: rem(140);
+    }
+  }
+  &__info{
+    width: 100%;
+    max-width: 100%;
+    padding-right: fluid(64,16);
+    @include media(lg){
+      width: 45%;
+      max-width: 45%;
+      padding-right: 0;
+    }
+    h2{
+      color: var(--text);
+      font-size: fluid(40, 30);
+      @include media(rxl){
+        font-size: rem(48);
+      }
+      span{
+        color: var(--header);
+        @include media(xl){
+          padding-left: rem(105);
+          display: inline-block;
+        }
+      }
+    }
+    &-text{
+      @include media(sm){
+        max-width: 50%;
+      }
+      @include media(xl){
+        padding-left: rem(105);
+        max-width: rem(500);
+      }
+    }
+  }
+  &__example{
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    padding-top: fluid(45,35);
+    padding-left: fluid(60,12);
+    padding-bottom: rem(24);
+    @include media(lg){
+      width: 55%;
+      max-width: 55%;
+      min-height: 100vh;
+    }
+    @include media(rxl){
+      padding-top: rem(55);
+      padding-left: rem(85);
+    }
+    &:after{
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(270deg, #282828 0%, rgba(40, 40, 40, 0.1) 100%);
+      transform: rotate(-180deg);
+      border-radius: 0 rem(20) rem(20) 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      @include media(lg){
+        border-radius: 0 rem(80) rem(80) 0;
+      }
+    }
+
+    &-head{
+      margin-bottom: rem(15);
+      text-align: center;
+      @include media(sm){
+        margin-bottom: rem(30);
+      }
+      @include media(xl){
+        text-align: left;
+      }
+      span {
+        font-weight: 400;
+        font-size: rem(12);
+        color: var(--text);
+        display: inline-block;
+        margin-bottom: rem(8);
+      }
+      h3{
+        margin: 0;
+        font-size: rem(28);
+        color: var(--header);
+
+      }
+    }
+  }
+
+
+  &__advantages{
+
+    margin-top: rem(32);
+    @include media(xl){
+      max-width: rem(500);
+      padding-left: rem(105);
+    }
+    .icon{
+      @include media(xl){
+        width: rem(48);
+        height: rem(48);
+      }
+    }
+    .advantages__item{
+      &:nth-child(1){
+        @include media(md){
+          flex: 0 0 30%;
+        }
+        @include media(xl){
+          flex: 1;
+        }
+      }
+    }
+  }
+
+  //messages
+  &__messages{
+    display: flex;
+    flex-direction: column;
+    padding-right: fluid(64,16);
+  }
+  &__message{
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: rem(14);
+    line-height: 114%;
+    color: var(--white);
+    padding: rem(12) rem(15);
+    border-radius: rem(18);
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-bottom: rem(8);
+    opacity: 0;
+    transform: translateY(10px);
+    p{
+      margin: 0;
+    }
+    .time{
+      font-style: italic;
+      font-weight: 400;
+      font-size: rem(12);
+      line-height: 1;
+      color: var(--tg-light-blue);
+      float: right;
+      display: inline-block;
+      padding: rem(2);
+    }
+    &:before{
+      content: '';
+      width: rem(15);
+      height: rem(16);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      bottom: 0;
+    }
+    &.--answer{
+      background: var(--bg);
+      max-width: 75%;
+      position: relative;
+      margin-left: rem(10);
+      align-self: flex-start;
+      &:before{
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='16' viewBox='0 0 15 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.92285 5.36829C8.78566 6.57686 8.46893 7.73098 8 8.80333C6.64353 11.9053 4.01344 14.323 0.770874 15.3955C2.11218 15.7889 3.53149 16 5 16C8.526 16 11.7677 14.7834 14.3285 12.7472C13.0563 11.7805 11.9333 10.6277 11 9.32944C10.1332 8.12372 9.43 6.79251 8.92285 5.36829Z' fill='%231C1C1C' /%3E%3Cpath d='M8 8.80333C8.46893 7.73098 8.78566 6.57686 8.92285 5.36829C9.43 6.79251 10.1332 8.12372 11 9.32944L8 0V8.80333Z' fill='%231C1C1C' /%3E%3C/svg%3E");
+        left: rem(-7);
+      }
+    }
+    &.--question{
+      background: var(--accent);
+      max-width: 60%;
+      align-self: flex-start;
+      margin: 0 rem(8) rem(16) auto;
+      position: relative;
+      display: inline-block;
+      &:before{
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='16' viewBox='0 0 15 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.04797 5.36829C6.18517 6.57686 6.50189 7.73098 6.97083 8.80333C8.32729 11.9053 10.9574 14.323 14.2 15.3955C12.8586 15.7889 11.4393 16 9.97083 16C6.44482 16 3.20312 14.7834 0.642334 12.7472C1.91449 11.7805 3.03749 10.6277 3.97083 9.32944C4.83762 8.12372 5.54083 6.79251 6.04797 5.36829Z' fill='%235975FF' /%3E%3Cpath d='M6.97083 8.80333C6.50189 7.73098 6.18517 6.57686 6.04797 5.36829C5.54083 6.79251 4.83762 8.12372 3.97083 9.32944L6.97083 0V8.80333Z' fill='%235975FF' /%3E%3C/svg%3E");
+        right: rem(-6);
+      }
+    }
+  }
+  &__dialog{
+    opacity: 0;
+    transform: translateY(rem(10));
+    margin-top: rem(10);
+    .btn{
+      background: var(--tg-button-bg);
+      border-radius: rem(4);
+      width: rem(155);
+      padding: rem(10) rem(24);
+      font-weight: 400;
+      font-size: rem(14);
+      color: var(--tg-white);
+      position: relative;
+      svg{
+        position: absolute;
+        top: rem(3);
+        right: rem(3);
+      }
+    }
+  }
+  &__caption{
+    text-align: center;
+    font-weight: 400;
+    font-size: rem(12);
+    padding-top: rem(40);
+    padding-bottom: rem(20);
+    color: var(--hint);
+  }
+
+  .blur{
+    top: 5%;
+    left: -10%;
+    @include media(lg){
+      top: 15%;
+    }
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

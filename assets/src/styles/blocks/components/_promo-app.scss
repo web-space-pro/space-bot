@@ -1,0 +1,122 @@
+@use '../../helpers' as *;
+
+.promo-app{
+  overflow: hidden;
+  padding: fluid(64,30) 0 ;
+  @include media(xl){
+    min-height: 100vh;
+    padding: 0;
+  }
+  &__content{
+    padding: 0 rem(20);
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 34%;
+    @include media(md){
+      padding-left: 40%;
+    }
+    @include media(lg){
+      padding-left: 0;
+      width: 38%;
+    }
+    @include media(xl){
+      max-width: rem(540);
+    }
+    &--text{
+      margin-top: rem(32);
+      margin-bottom: rem(32);
+      max-width: rem(300);
+      bold{
+        color: var(--white);
+        font-weight: 700;
+      }
+    }
+  }
+  &__mocUp{
+    position: absolute;
+    top: 0;
+    figure{
+      position: relative;
+      img{
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &:after{
+      content: '';
+      width: 100%;
+      background: linear-gradient(270deg, #282828 0%, rgba(40, 40, 40, 0.1) 100%);
+      transform: rotate(-180deg);
+      border-radius: 0 rem(20) rem(20) 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      @include media(xl){
+        border-radius: rem(80) 0 0 rem(80);
+      }
+    }
+    &.--first{
+      left: 0;
+      width: 30%;
+      @include media(md){
+        width: 20vw;
+      }
+      @include media(rwd){
+        width: 18vw;
+      }
+      &:after{
+        height: 84%;
+        right: 30%;
+        @include media(xl){
+          right: 0;
+        }
+      }
+      figure{
+        right: -5%;
+        @include media(md){
+          right: -40%;
+        }
+        @include media(xl){
+          right: -30%;
+        }
+        @include media(rwd){
+          right: -45%;
+        }
+      }
+    }
+    &.--second{
+      right: 0;
+      width: 25vw;
+      display: none;
+      @include media(lg){
+        display: block;
+      }
+      @include media(rwd){
+        width: 20vw;
+      }
+      &:after{
+        height: 100%;
+        border-radius: 0 rem(20) rem(20) 0;
+        top: 5%;
+        left: 40%;
+        @include media(xl){
+          left: 0;
+        }
+        @include media(xl){
+          border-radius: 0 rem(80) rem(80) 0;
+        }
+      }
+      figure{
+        left: rem(-16);
+        @include media(xl){
+          left: -6vw;
+        }
+        @include media(hd){
+          left: -10vw;
+        }
+      }
+    }
+  }
+}

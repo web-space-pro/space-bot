@@ -1,0 +1,13 @@
+@use '../../helpers/index' as *;
+.error-404{
+  margin: fluid(100, 50) 0;
+  text-align: center;
+  h1{
+    @include fluid-text(96,56);
+    color: var(--color-secondary);
+    margin-bottom: 0;
+  }
+  h2{
+    @include fluid-text(42,20);
+  }
+}
