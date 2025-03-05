@@ -1,0 +1,49 @@
+@use '../../helpers' as *;
+
+.promo{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: rem(20);
+  margin-bottom: rem(20);
+  @include media(lg){
+    padding-top: rem(40);
+    margin-bottom: rem(40);
+  }
+  &__container{
+    text-align: center;
+  }
+  &__icon{
+    width: rem(200);
+    height: rem(200);
+    margin: 0 auto;
+    margin-bottom: rem(20);
+    padding-top: fluid(40,20);
+    transform: scale(.7);
+    @include media(lg){
+      transform: scale(1);
+    }
+  }
+  &__title{
+    margin: 0 auto;
+    @include media(lg){
+      max-width: rem(1000);
+    }
+  }
+  .blur{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 200px;
+    z-index: -1;
+    svg{
+      height: 100%;
+    }
+  }
+
+  .blur{
+    top: 0;
+    right: -10%;
+  }
+}

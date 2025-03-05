@@ -1,0 +1,39 @@
+@use 'helpers' as *;
+
+:root {
+  --bg: #1c1c1c;
+  --header: #f7f7f7;
+
+  --white: #fff;
+  --bg-light: #fafafa;
+  --white-100: #f7f7f7;
+
+  --text: #b3b3b3;
+
+
+  --bg-2: #282828;
+  --stroke: #404040;
+  --hint: #666;
+  --tg-light-blue: #b1c3d5;
+  --accent: #5975ff;
+  --tg-button-bg: #3f464c;
+
+  --font-family-base: 'Involve', sans-serif;
+  --second-family: 'SF-Pro-Display', sans-serif;
+
+  --container-width: #{rem(1130)};
+  --container-width-secondary: #{rem(1200)};
+  --container-padding-x: #{rem(16)};
+
+  --transition-duration: 0.2s;
+
+  --100vw: calc(100vw - var(--scrollbar-width));
+
+  --rounded-4: #{rem(4)};
+  --rounded-8: #{rem(8)};
+
+  @include media(rwd) {
+    --container-width: #{rem(1440)};
+    --container-width-secondary: #{rem(1500)};
+  }
+}

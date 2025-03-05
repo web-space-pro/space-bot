@@ -1,0 +1,97 @@
+[
+    {
+        "ID": 12,
+        "key": "group_679cc08b1b032",
+        "title": "Компоненты",
+        "fields": [
+            {
+                "ID": 13,
+                "key": "field_679cc08bbbd1d",
+                "label": "Структура сайта",
+                "name": "components",
+                "aria-label": "",
+                "prefix": "acf",
+                "type": "flexible_content",
+                "value": null,
+                "menu_order": 0,
+                "instructions": "",
+                "required": 0,
+                "id": "",
+                "class": "",
+                "conditional_logic": 0,
+                "parent": 12,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layouts": {
+                    "layout_679cc1612228b": {
+                        "key": "layout_679cc1612228b",
+                        "name": "hero",
+                        "label": "Hero",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "ID": 14,
+                                "key": "field_679cc16b53f44",
+                                "label": "Title",
+                                "name": "title",
+                                "aria-label": "",
+                                "prefix": "acf",
+                                "type": "text",
+                                "value": null,
+                                "menu_order": 0,
+                                "instructions": "",
+                                "required": 0,
+                                "id": "",
+                                "class": "",
+                                "conditional_logic": 0,
+                                "parent": 13,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "parent_layout": "layout_679cc1612228b",
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "_name": "title",
+                                "_valid": 1
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    }
+                },
+                "min": "",
+                "max": "",
+                "button_label": "Добавить",
+                "_name": "components",
+                "_valid": 1
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "_valid": true
+    }
+]
