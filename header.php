@@ -18,11 +18,7 @@
 	<?php wp_head(); ?>
     <?php
     if (function_exists('get_field')) {
-<<<<<<< HEAD
-        $phone = get_field('op_phone', 'options');
-=======
         $phone = get_field('o_phone', 'options');
->>>>>>> 768925d (Fixes)
         $email = get_field('op_label_head', 'options');
         $tg = get_field('o_tg', 'options');
         $wts = get_field('o_wts', 'options');
@@ -30,10 +26,6 @@
     }
     ?>
 </head>
-<<<<<<< HEAD
-
-=======
->>>>>>> 768925d (Fixes)
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
