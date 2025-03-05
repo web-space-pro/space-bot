@@ -94,10 +94,7 @@
                 </div>
             </label>
         </div>
-<<<<<<< HEAD
-=======
         </div>
->>>>>>> 768925d (Fixes)
     </div>
 </header>
 <div class="mobileMenu">
