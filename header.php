@@ -18,7 +18,11 @@
 	<?php wp_head(); ?>
     <?php
     if (function_exists('get_field')) {
+<<<<<<< HEAD
         $phone = get_field('op_phone', 'options');
+=======
+        $phone = get_field('o_phone', 'options');
+>>>>>>> 768925d (Fixes)
         $email = get_field('op_label_head', 'options');
         $tg = get_field('o_tg', 'options');
         $wts = get_field('o_wts', 'options');
@@ -26,7 +30,10 @@
     }
     ?>
 </head>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 768925d (Fixes)
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
@@ -71,8 +78,22 @@
                     </svg>
                 </a>
                 <?php endif; ?>
+                <?php if(!empty($phone)) : ?>
+                <a href="tel:<?=$phone?>" class="header__phone btn btn-primary">
+                <?=$phone?>
+                </a>
+                <?php endif; ?>
+                
             </div>
-
+            <div class="flex-center">
+            <?php if(!empty($phone)) : ?>
+                <a href="tel:<?=$phone?>" class="header__phone-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="phone">
+  <path fill="none" d="M0 0h24v24H0V0z"/>
+  <path d="M19.23 15.26l-2.54-.29c-.61-.07-1.21.14-1.64.57l-1.84 1.84c-2.83-1.44-5.15-3.75-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52c-.12-1.01-.97-1.77-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07.53 8.54 7.36 15.36 15.89 15.89 1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98z" fill="#fff" class="color000000 svgShape"/>
+</svg>
+                </a>
+                <?php endif; ?>
             <label class="header__burger burger">
                 <input type="checkbox" checked>
                 <div>
@@ -81,6 +102,10 @@
                 </div>
             </label>
         </div>
+<<<<<<< HEAD
+=======
+        </div>
+>>>>>>> 768925d (Fixes)
     </div>
 </header>
 <div class="mobileMenu">

@@ -1,6 +1,7 @@
 @use 'helpers' as *;
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
   &.is-lock {
     overflow: hidden;
   }
@@ -174,4 +175,9 @@ a.link-icon{
     width: rem(300);
     height: rem(300);
   }
+}
+
+.flex-center {
+  @include flex-center();
+  gap: 10px;
 }

@@ -35,6 +35,31 @@
   &__right{
     display: flex;
   }
+
+  &__phone {
+    display: none;
+    color: var(--white);
+    font-weight: 600;
+    margin-left: 20px;
+    padding: 15px;
+    @include media(lg){
+      display: block;
+    }
+  }
+  &__phone-icon {
+    @include flex-center;
+    width: 32px;
+    height: 32px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    @include media(lg){
+      display: none;
+    }
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
 }
 
 // Навигация

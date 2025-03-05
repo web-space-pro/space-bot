@@ -1,10 +1,9 @@
 @use '../../helpers' as *;
 
 .fast-start{
-  padding-bottom: fluid(64,30);
-  padding-top: fluid(64,30);
+  padding-bottom: fluid(40,30);
+  padding-top: fluid(40,30);
   @include media(xl){
-    min-height: 100vh;
     padding-top: 0;
   }
   &__container{
